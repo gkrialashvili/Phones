@@ -1,0 +1,90 @@
+﻿@model Phones.Models.PhoneData
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Detail";
+}
+
+<div class="detail-container d-flex flex-column">
+    <div class="text-center">
+        <h1>@Model.Brand.Name @Model.Model</h1>
+        <img class="img-fluid rounded phone-img mt-4" src="@("/Images/" + Model.ImageName)" />
+    </div>
+    <div class="details-text-container d-flex flex-column">
+        <h3>General Information</h3>
+        <div class="detail-information-container d-flex flex-row justify-content-between font-weight-bold">
+            <div class="details-title price-tag">
+                <span>Price:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.Price Gel</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Brand:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.Brand.Name</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Screen Size:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.ScreenSize</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Weight:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.Weight</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Screen Resolution:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.ScreenResolution</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Model Of Processor:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.ProcessorModel</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>RAM:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.Ram</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Internal Memory:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.Memory</span>
+            </div>
+        </div>
+        <div class="detail-information-container d-flex flex-row justify-content-between">
+            <div class="details-title">
+                <span>Operating System:</span>
+            </div>
+            <div class="details-text">
+                <span>@Model.OperationSystem</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
